@@ -1,0 +1,3 @@
+[submodule "Pegasus/vendor/spdlog"]
+	path = Pegasus/vendor/spdlog
+	url = https://github.com/gabime/spdlog
