@@ -1,6 +1,6 @@
-#include "Core.h"
-
 #include <memory>
+
+#include "Core.h"
 #include "spdlog/spdlog.h"
 
 namespace Pegasus {
