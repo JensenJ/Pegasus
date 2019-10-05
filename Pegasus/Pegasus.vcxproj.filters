@@ -4,6 +4,9 @@
     <Filter Include="Pegasus">
       <UniqueIdentifier>{9DA60A05-0986-89A0-129E-14777EFCEF01}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pegasus\Events">
+      <UniqueIdentifier>{E11FA915-CDED-9C1B-B681-0D42A2EE7880}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pegasus.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Pegasus\EntryPoint.h">
       <Filter>Pegasus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pegasus\Events\ApplicationEvent.h">
+      <Filter>Pegasus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pegasus\Events\Event.h">
+      <Filter>Pegasus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pegasus\Events\KeyEvent.h">
+      <Filter>Pegasus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pegasus\Events\MouseEvent.h">
+      <Filter>Pegasus\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Pegasus\Log.h">
       <Filter>Pegasus</Filter>
