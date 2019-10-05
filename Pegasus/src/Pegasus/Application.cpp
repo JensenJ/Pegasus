@@ -1,3 +1,4 @@
+#include "pgpch.h"
 #include "Application.h"
 
 #include "Pegasus/Events/ApplicationEvent.h"

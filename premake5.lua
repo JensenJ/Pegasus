@@ -18,6 +18,9 @@ project "Pegasus"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "pgpch.h"
+	pchsource "Pegasus/src/pgpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

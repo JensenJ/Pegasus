@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Pegasus {
 	class PEGASUS_API MouseMovedEvent : public Event {
 	public:

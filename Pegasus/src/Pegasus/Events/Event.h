@@ -1,9 +1,7 @@
 #pragma once
 
+#include "pgpch.h"
 #include "Pegasus/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Pegasus {
 
