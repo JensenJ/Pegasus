@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
-//#ifdef PG_PLATFORM_WINDOWS
-	//#include <Windows.h>
-//#endif
+#include "Pegasus/Log.h"
+
+#ifdef PG_PLATFORM_WINDOWS
+	#include <Windows.h>
+#endif

@@ -10,6 +10,11 @@ workspace "Pegasus"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Pegasus/vendor/GLFW/include"
+
+include "Pegasus/vendor/GLFW"
+
 project "Pegasus"
 	location "Pegasus"
 	kind "SharedLib"
@@ -30,7 +35,14 @@ project "Pegasus"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

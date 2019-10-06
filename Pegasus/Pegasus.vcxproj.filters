@@ -7,6 +7,12 @@
     <Filter Include="Pegasus\Events">
       <UniqueIdentifier>{E11FA915-CDED-9C1B-B681-0D42A2EE7880}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pegasus.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Pegasus\Log.h">
       <Filter>Pegasus</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pegasus\Window.h">
+      <Filter>Pegasus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\pgpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Pegasus\Log.cpp">
       <Filter>Pegasus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pgpch.cpp" />
   </ItemGroup>
