@@ -66,9 +66,11 @@ namespace Pegasus {
 			ss << "MouseButtonPressedEvent: " << m_Button;
 			return ss.str();
 		}
+
+		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class Pegasus_API MouseButtonReleasedEvent : public MouseButtonEvent {
+	class PEGASUS_API MouseButtonReleasedEvent : public MouseButtonEvent {
 	public:
 		MouseButtonReleasedEvent(int button)
 			: MouseButtonEvent(button) {}
