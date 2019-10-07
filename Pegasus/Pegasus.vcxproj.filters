@@ -37,6 +37,12 @@
     <ClInclude Include="src\Pegasus\Events\MouseEvent.h">
       <Filter>Pegasus\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pegasus\Layer.h">
+      <Filter>Pegasus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pegasus\LayerStack.h">
+      <Filter>Pegasus</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pegasus\Log.h">
       <Filter>Pegasus</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pegasus\Application.cpp">
+      <Filter>Pegasus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pegasus\Layer.cpp">
+      <Filter>Pegasus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pegasus\LayerStack.cpp">
       <Filter>Pegasus</Filter>
     </ClCompile>
     <ClCompile Include="src\Pegasus\Log.cpp">
