@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Pegasus/vendor/GLFW/include"
+IncludeDir["Glad"] = "Pegasus/vendor/Glad/include"
 
 include "Pegasus/vendor/GLFW"
+include "Pegasus/vendor/Glad"
 
 project "Pegasus"
 	location "Pegasus"
@@ -36,12 +38,14 @@ project "Pegasus"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -53,7 +57,8 @@ project "Pegasus"
 		defines
 		{
 			"PG_PLATFORM_WINDOWS",
-			"PG_BUILD_DLL"
+			"PG_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
