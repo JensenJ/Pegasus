@@ -4,3 +4,6 @@
 [submodule "Pegasus/vendor/GLFW"]
 	path = Pegasus/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Pegasus/vendor/imgui"]
+	path = Pegasus/vendor/imgui
+	url = https://github.com/TheCherno/imgui

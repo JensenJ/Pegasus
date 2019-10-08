@@ -18,6 +18,7 @@ class Sandbox : public Pegasus::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Pegasus::ImGuiLayer());
 	}
 
 	~Sandbox() {

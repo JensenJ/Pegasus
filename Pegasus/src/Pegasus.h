@@ -5,5 +5,7 @@
 #include "Pegasus/Log.h"
 #include "Pegasus/Layer.h"
 
+#include "Pegasus/ImGui/ImGuiLayer.h"
+
 //Entry point
 #include "Pegasus/EntryPoint.h"
