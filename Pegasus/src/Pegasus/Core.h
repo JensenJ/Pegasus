@@ -18,6 +18,10 @@
 	#define PG_CORE_ASSERT(x, ...)
 #endif
 
+#ifdef PG_DEBUG
+	#define PG_ENABLE_ASSERTS
+#endif
+
 #define BIT(x) (1 << x)
 
 #define PG_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)

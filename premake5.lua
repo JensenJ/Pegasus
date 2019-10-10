@@ -1,5 +1,6 @@
 workspace "Pegasus"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -14,15 +15,18 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Pegasus/vendor/GLFW/include"
 IncludeDir["Glad"] = "Pegasus/vendor/Glad/include"
 IncludeDir["ImGui"] = "Pegasus/vendor/imgui"
+group "Dependencies"
+	include "Pegasus/vendor/GLFW"
+	include "Pegasus/vendor/Glad"
+	include "Pegasus/vendor/imgui"
 
-include "Pegasus/vendor/GLFW"
-include "Pegasus/vendor/Glad"
-include "Pegasus/vendor/imgui"
+group ""
 
 project "Pegasus"
 	location "Pegasus"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -55,7 +59,6 @@ project "Pegasus"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -72,23 +75,24 @@ project "Pegasus"
 
 	filter "configurations:Debug"
 		defines "PG_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "PG_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "PG_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -112,7 +116,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -122,15 +125,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "PG_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "PG_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "PG_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
